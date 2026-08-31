@@ -1,0 +1,17 @@
+.titulo {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 48px;
+  
+  background: linear-gradient(to right, #ef3550, #f48fb1, #7e57c2, #2196f3, #2cba00, #a3ff00, #ff5722);
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
+  display: inline-block;
+}
+.subtitulo {
+  font-style: italic;
+}
