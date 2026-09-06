@@ -1,0 +1,12 @@
+.footer{
+    background: linear-gradient(to right, green, orange);
+    padding: 20px;
+    text-align: center;
+    font-style: bold;
+}
+.header{
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    background: linear-gradient(to right, green, orange);
+}

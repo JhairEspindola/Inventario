@@ -1,4 +1,19 @@
 .welcome-container{
     border: 2px solid #333333;
-    background-color: cyan;
+    background-color: green;
+}
+.containers{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+}
+.start-button{
+    background-color: lightblue;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 20px;
 }
