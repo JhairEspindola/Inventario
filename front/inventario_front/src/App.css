@@ -1,0 +1,6 @@
+.App{
+    background: linear-gradient(to right, green, orange);
+    padding: 20px;
+    text-align: center;
+    font-style: bold;
+}

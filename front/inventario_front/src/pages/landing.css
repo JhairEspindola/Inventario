@@ -1,0 +1,27 @@
+.landing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: green;
+    color: black;
+}
+.landing-features{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    Background-color: orange;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: lightblue;
+}
+.landing-image{
+    max-width: 100%;
+    height: auto;
+    background-color: lightblue;
+    gap: 20px;
+}
