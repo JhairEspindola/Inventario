@@ -7,42 +7,42 @@ import "./welcome.css";
 function Welcome() {
   return (
     <>
-      <div className="header">
-        <Header/>
-      </div>
-      <div className="welcome-container">
-        <Text/>
-      </div>
-      <div className="containers">
-        <section className="container">
-          <h2>Bienvenido al Administrador de Inventario</h2>
-          <p>
-            Esta aplicación te permite gestionar y controlar el inventario de tu negocio de manera eficiente. 
-            Puedes agregar, editar y eliminar productos, así como realizar un seguimiento de las existencias y generar informes.
-          </p>
+      <Header/>
+      <main className="welcome-page">
+        <section className="welcome-hero">
+          <div className="hero-content">
+            <Text/>
+            <div className="hero-actions">
+              <Link className="button button-primary" to="/landing">Explorar funcionalidades</Link>
+              <a className="button button-secondary" href="#beneficios">Conoce más</a>
+            </div>
+          </div>
         </section>
-        <section className="container2">
-          <h2>Características principales</h2>
-          <ul>
-            <li>Agregar, editar y eliminar productos del inventario.</li>
-            <li>Control de existencias y alertas de stock bajo.</li>
-            <li>Generación de informes y estadísticas de ventas.</li>
-            <li>Interfaz intuitiva y fácil de usar.</li>
-          </ul>
-          <section className="container3">
-            <h2>¡Comienza a gestionar tu inventario hoy mismo!</h2>
-            <p>
-              Explora las funcionalidades de la aplicación y optimiza la gestión de tu inventario para mejorar la eficiencia de tu negocio.
-            </p>
-            <Link to="/landing">
-              <button className="start-button">Comenzar</button>
-            </Link>
-          </section>
+        <section className="welcome-content" id="beneficios">
+          <div className="section-heading">
+            <h2>Todo lo que necesitas para trabajar mejor</h2>
+            <p>Menos tiempo buscando información y más tiempo atendiendo a tus clientes.</p>
+          </div>
+          <div className="feature-grid">
+            <article className="feature-card">
+              <div className="feature-icon" aria-hidden="true">✓</div>
+              <h3>Inventario actualizado</h3>
+              <p>Agrega, edita y elimina productos desde un espacio organizado y fácil de entender.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon" aria-hidden="true">!</div>
+              <h3>Más control del stock</h3>
+              <p>Identifica rápidamente los productos que necesitan atención antes de que se agoten.</p>
+            </article>
+            <article className="feature-card">
+              <div className="feature-icon" aria-hidden="true">↗</div>
+              <h3>Decisiones más claras</h3>
+              <p>Consulta la información de tu negocio de forma simple para planificar tus compras.</p>
+            </article>
+          </div>
         </section>
-      </div>
-      <div className="footer">
-        <Footer/>
-      </div>
+      </main>
+      <Footer/>
     </>
     
   );
