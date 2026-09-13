@@ -1,17 +1,24 @@
-.titulo {
-  font-family: 'Times New Roman', sans-serif;
-  font-size: 48px;
-  
-  background: linear-gradient(to right, #ef3550, #f48fb1, #7e57c2, #2196f3, #2cba00, #a3ff00, #ff5722);
-  
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  
-  display: inline-block;
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--orange-500);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
 }
+
+.titulo {
+  max-width: 680px;
+  margin: 0;
+  color: var(--green-900);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
 .subtitulo {
-  font-style: italic;
+  max-width: 560px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
 }
