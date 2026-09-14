@@ -12,6 +12,7 @@ function Header() {
         <nav className="site-nav" aria-label="Navegación principal">
           <Link className="nav-link" to="/">Inicio</Link>
           <Link className="nav-link" to="/landing">Funcionalidades</Link>
+          <Link className="nav-link" to="/register">Registrar</Link>
         </nav>
       </div>
     </header>
