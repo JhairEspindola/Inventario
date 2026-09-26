@@ -12,6 +12,8 @@ function Header() {
         <nav className="site-nav" aria-label="Navegación principal">
           <Link className="nav-link" to="/">Inicio</Link>
           <Link className="nav-link" to="/landing">Funcionalidades</Link>
+          <Link className="nav-link" to="/hijo">Registrar</Link>
+          <Link className="nav-link" to="/padre">Inventario</Link>
         </nav>
       </div>
     </header>

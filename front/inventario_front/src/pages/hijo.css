@@ -1,0 +1,140 @@
+.hijo-page {
+  min-height: calc(100svh - 76px);
+  padding: 64px 20px 88px;
+  background: var(--page);
+}
+
+.hijo-shell {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+.hijo-heading {
+  margin-bottom: 30px;
+}
+
+.hijo-kicker {
+  margin: 0 0 10px;
+  color: var(--orange-500);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.hijo-heading h1 {
+  margin: 0;
+  color: var(--green-900);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hijo-heading > p:last-child {
+  max-width: 580px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hijo-form {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hijo-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.hijo-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hijo-field-full {
+  grid-column: 1 / -1;
+}
+
+.hijo-field label {
+  color: var(--green-900);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.hijo-field input,
+.hijo-field select,
+.hijo-field textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--surface);
+  font: inherit;
+}
+
+.hijo-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.hijo-field input:focus,
+.hijo-field select:focus,
+.hijo-field textarea:focus {
+  border-color: var(--green-500);
+  outline: 3px solid rgba(60, 154, 98, 0.15);
+}
+
+.hijo-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px 30px;
+  border-top: 1px solid var(--border);
+  background: #fbfdfb;
+}
+
+.hijo-submit {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  background: var(--green-700);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.hijo-submit:hover,
+.hijo-submit:focus-visible {
+  background: var(--green-900);
+}
+
+@media (max-width: 620px) {
+  .hijo-page {
+    padding: 48px 14px 64px;
+  }
+
+  .hijo-fields {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  .hijo-field-full {
+    grid-column: auto;
+  }
+
+  .hijo-actions {
+    padding: 16px 22px;
+  }
+
+  .hijo-submit {
+    width: 100%;
+  }
+}
