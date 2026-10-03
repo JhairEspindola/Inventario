@@ -1,0 +1,32 @@
+$kind: http-request
+method: PUT
+url: 'localhost:8080/api/categories/{{categoryId}}'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nombre": "{{nombre}} Actualizado",
+      "descripcion": "{{descripcion}}",
+      "stock": {{stock}}
+    }
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+
+      const body = pm.response.json();
+
+      pm.test("nombre was updated", function () {
+          pm.expect(body.nombre).to.include("Actualizado");
+      });
+
+      pm.test("id is unchanged", function () {
+          pm.expect(body.id).to.equal(Number(pm.collectionVariables.get("categoryId")));
+      });

@@ -1,0 +1,21 @@
+$kind: http-request
+method: GET
+url: 'localhost:8080/api/categories/{{categoryId}}'
+order: 3000
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status 200 OK", function () {
+          pm.response.to.have.status(200);
+      });
+
+      const body = pm.response.json();
+
+      pm.test("id matches categoryId variable", function () {
+          pm.expect(body.id).to.equal(Number(pm.collectionVariables.get("categoryId")));
+      });
+
+      pm.test("nombre is a non-empty string", function () {
+          pm.expect(body.nombre).to.be.a("string").and.not.empty;
+      });

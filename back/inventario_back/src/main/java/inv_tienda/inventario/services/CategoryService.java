@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface CategoryService {
 
-    CategoryResponse create(CategoryRequest Request);
+    CategoryResponse create(CategoryRequest request);
 
-    List<CategoryResponse>findAll();
+    List<CategoryResponse> findAll();
 
     CategoryResponse findById(Long id);
 
@@ -18,4 +18,11 @@ public interface CategoryService {
 
     void delete(Long id);
 
+    Category getEntity(Long id);
+
+    void increaseStock(Long idCategoria, int quantity);
+
+    void decreaseStock(Long idCategoria, int quantity);
+
+    void applyStockDelta(Long idCategoria, int delta);
 }

@@ -1,0 +1,14 @@
+$kind: http-request
+method: DELETE
+url: 'localhost:8080/api/categories/{{categoryId}}'
+order: 5000
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status 204 No Content", function () {
+          pm.response.to.have.status(204);
+      });
+
+      // Clear the saved id after deletion
+      pm.collectionVariables.unset("categoryId");
